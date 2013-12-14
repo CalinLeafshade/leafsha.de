@@ -21,7 +21,7 @@ var post = function (req, res,next) {
 
 				util.pump(is, os, function() {
 		    		fs.unlinkSync(p);
-		    		res.send("http://leafsha.de/img/" + path);
+		    		res.send("http://leafsha.de/" + path);
 				});
 				
 			});
