@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #222;
+}
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 132px;
+  color: #fff;
+  margin-left: -10px;
+  margin-top: -36px;
+  position: absolute;
+  z-index: 5000;
+}
+#band {
+  height: 100%;
+  width: auto;
+  position: fixed;
+  left: 650px;
+  top: 0px;
+  overflow: hidden;
+}
+#band1,
+#band2,
+#band3,
+#band4,
+#band5 {
+  background-color: #f00;
+  width: 30px;
+  height: 100%;
+  float: left;
+}
+.bandBlock,
+.bandRule {
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+}
+.bandRule {
+  background-color: transparent;
+}
