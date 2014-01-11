@@ -2,7 +2,7 @@ extends layout
 
 
 block content
-	div.gallery.js-masonry(data-masonry-options={"columnWidth": 10, "itemSelector": ".item" })
+	div.gallery
 		- each image in images
 			a(href="/i/" + image.split(".").shift())
 				img.item(src="/images/" + tag + "/" + image)

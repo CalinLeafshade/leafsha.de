@@ -60,4 +60,13 @@ $(document).ready(function(){
         $(this).css({border: "2px solid transparent"});
     });
 
+    $('.gallery').masonry({
+        columnWidth: 20,
+        itemSelector: '.item',
+        isFitWidth: true
+    }).imagesLoaded(function() {
+        console.log("reloaded");
+        $('.gallery').masonry();
+    });
+
 });
