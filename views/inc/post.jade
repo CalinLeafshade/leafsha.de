@@ -1,0 +1,17 @@
+div.post
+    h2
+        a(href=post.url)
+            = post.title
+    div.content
+        != post.content
+    span.date Posted on #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
+    if showComments
+        include comments
+    else
+        div.commentLink
+            a(href=post.url + "#comments")
+                show comments of which there are 2
+    div.tags
+        - each tag in post.tags
+            a(href=tagUrl(tag))
+                span.label.label-info ##{tag}

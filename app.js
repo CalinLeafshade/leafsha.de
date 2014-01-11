@@ -9,13 +9,26 @@ var user = require('./routes/user');
 var image = require('./routes/image')
 var http = require('http');
 var path = require('path');
+var Poet = require('poet');
 
 var app = express();
+
+var poet = Poet(app, {
+  posts: './_posts/',
+  postsPerPage: 5,
+  metaFormat: 'json'
+});
+
+poet.watch().init().then(function () {
+  // ready to go!
+});
+
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'jade');
 app.set('title', 'leafsha.de')
 app.use(express.favicon());
 app.use(express.logger('dev'));

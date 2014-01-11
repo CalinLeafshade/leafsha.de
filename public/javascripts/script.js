@@ -33,6 +33,8 @@ function runDiv(d) {
 
 }
 
+var nums = [ "zero", "one", "two", "three", "four", "five" ];
+
 $(document).ready(function(){
 
     processHeader();
@@ -44,5 +46,17 @@ $(document).ready(function(){
             $("<div />").appendTo(t).addClass(ii == 5 ? "bandRule" : "bandBlock").css("opacity",0);// Math.random() < ii ? 1 : 0);
         }
     }
+
+    $('a').each(function() {
+        var r = nums[Math.floor((Math.random()*5)+1)];
+
+        $(this).addClass(r)
+    })
+
+    $('.post:before').each(function() {
+        $(this).css("background-color: #fffff;")
+    
+    })
+
 
 });

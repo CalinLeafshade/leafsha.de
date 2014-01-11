@@ -43,6 +43,7 @@ var get = function (req,res,next) {
   			} 
   			else 
   			{
+				console.log("Passing on " + img);
     			next();
   			}
 		});
