@@ -2,9 +2,10 @@ div.post
     h2
         a(href=post.url)
             = post.title
+    span.date Posted on #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
     div.content
         != post.content
-    span.date Posted on #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
+    
     if showComments
         include comments
     else

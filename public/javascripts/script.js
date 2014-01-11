@@ -53,10 +53,11 @@ $(document).ready(function(){
         $(this).addClass(r)
     })
 
-    $('.post:before').each(function() {
-        $(this).css("background-color: #fffff;")
-    
-    })
-
+    $('.gallery img').hover(function() {
+        $(this).css({border: "2px solid " + cols[Math.floor((Math.random()*5)+1) - 1]})
+    },
+    function() {
+        $(this).css({border: "2px solid transparent"});
+    });
 
 });

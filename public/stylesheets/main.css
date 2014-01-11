@@ -10,7 +10,6 @@ body {
 }
 a {
   color: #eee;
-  text-decoration: none;
 }
 a.one:hover {
   color: #de5234;
@@ -37,7 +36,10 @@ h1 {
 h2 {
   font-size: 3em;
   font-weight: lighter;
-  text-transform: lowercase;
+  text-transform: capitalize;
+}
+h2 a {
+  text-decoration: none;
 }
 #band {
   height: 100%;
@@ -70,7 +72,7 @@ h2 {
   width: 600px;
   margin-top: -10px;
   padding-left: 20px;
-  padding-top: 30px;
+  padding-top: 0px;
 }
 .post {
   border-left: solid 1px #fff;
@@ -105,10 +107,35 @@ h2 {
 }
 .date,
 .commentLink {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #ccc;
+}
+.date {
+  text-transform: uppercase;
 }
 .label {
   margin-right: 10px;
   font-size: 0.8em;
+}
+.gallery {
+  background-color: #111;
+  border-radius: 15px;
+  padding: 5px;
+}
+.gallery img {
+  margin: 5px;
+  border: 2px solid transparent;
+}
+.menu ul {
+  text-align: center;
+  margin: 10px 10px;
+  margin-bottom: 20px;
+}
+.menu li {
+  display: inline;
+  margin: 10px 10px;
+  font-size: 2em;
+}
+.menu a {
+  text-decoration: none;
 }

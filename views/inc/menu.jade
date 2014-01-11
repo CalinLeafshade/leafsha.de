@@ -1,0 +1,5 @@
+div.menu
+	ul
+		each link in links
+			li
+				a(href=link.url, class=link.url === url && 'active')= link.name
