@@ -78,6 +78,10 @@ var showImages = function(req,res) {
 			res.send(404);
 		}
 		else if (files.length) {
+			files.sort(function(a, b) {
+               return fs.statSync(tagDir + "/" + b).mtime.getTime() - 
+                      fs.statSync(tagDir + "/" + a).mtime.getTime();
+           	});
 			res.render("images", {images: files, tag: tag})
 		}
 	});
